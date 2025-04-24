@@ -23,8 +23,8 @@
         android:layout_width="210dp"
         android:layout_height="237dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="18dp"
-        android:src="@drawable/handpill"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/mr_harboucha"
         android:layout_centerHorizontal="true"
         />
 
