@@ -1,26 +1,55 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        // Initialize UI components and set up any necessary logic
+        // For example, you might display user-specific content here
+        if (!isLoggedIn()) {
+            // Navigate to the LoginActivity
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish(); // Optional: Call finish() if you want to remove MainActivity from the back stack
+        } else {
+            // Optionally, retrieve and display user-specific content
+            String email = getLoggedInEmail();
+            // Display welcome message or user-specific data
         }
-    public void navigateToSignUp(View view) {
-        // Create an Intent to navigate to the SignUpActivity
-        Intent intent = new Intent(MainActivity.this, signup.class);
+    }
+
+    public boolean isLoggedIn() {
+        SharedPreferences sharedPreferences = getSharedPreferences("login_prefs", Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean("isLoggedIn", false);
+    }
+
+    public String getLoggedInEmail() {
+        SharedPreferences sharedPreferences = getSharedPreferences("login_prefs", Context.MODE_PRIVATE);
+        return sharedPreferences.getString("email", null);
+    }
+
+    public void logout() {
+        SharedPreferences sharedPreferences = getSharedPreferences("login_prefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        // Navigate to the LoginActivity
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-    }}
+        finish();
+    }
+
+}

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signup">
+    tools:context=".SignUpActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -67,7 +67,8 @@
         android:layout_marginTop="490dp"
 
         android:background="@drawable/roundedshape2"
-        android:hint=" Email"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -84,7 +85,8 @@
         android:layout_marginTop="590dp"
 
         android:background="@drawable/roundedshape2"
-        android:hint=" Password"
+        android:hint="Password"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
