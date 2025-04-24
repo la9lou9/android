@@ -8,94 +8,14 @@
     tools:context=".MainActivity">
 
 
-
-    <ImageView
+    <TextView
+        android:id="@+id/textViewWelcome"
         android:layout_width="wrap_content"
-        android:layout_height="1070dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="-6dp"
-        android:layout_marginEnd="-280dp"
-        android:layout_marginBottom="-150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/login" />
-
-    <ImageView
-        android:layout_width="210dp"
-        android:layout_height="237dp"
-        android:src="@drawable/baseline_account_circle_24"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="120dp" />   <!-- Adjust this value to move up or down -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="76dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-
-        android:layout_marginTop="370dp"
-
-        android:background="@drawable/roundedshape"
-        android:hint=" Username"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textSize="23sp" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="76dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-
-        android:layout_marginTop="470dp"
-
-        android:background="@drawable/roundedshape"
-        android:hint=" Password "
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textSize="23sp" />
-
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="65dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="570dp"
-        android:backgroundTint="#B0D3CC"
-        android:text="Login"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Main Screen!"
         android:textSize="24sp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:textSize="20sp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
         android:layout_centerHorizontal="true"
-        android:text="Forgot Password"
-        android:textColor="@android:color/black"
-        android:clickable="true"
-        android:onClick="onButtonClick"
-        android:background="?android:attr/selectableItemBackground"
-        />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:textSize="20sp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="690dp"
-        android:layout_centerHorizontal="true"
-        android:text="Don't have an account?"
-        android:textColor="@android:color/black"
-        android:clickable="true"
-        android:onClick="navigateToSignUp"
-        android:textStyle="bold"
-        android:background="?android:attr/selectableItemBackground"
-        />
+        android:layout_marginTop="50dp"/>
 
 
 
