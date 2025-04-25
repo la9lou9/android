@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean authenticateUser(String email, String password) {
         Cursor cursor = userDAO.getUserByEmail(email);
         if (cursor.moveToFirst()) {
-            String storedPassword = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.USERPASSWORD));
+            String storedPassword = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_PASSWORD));
             cursor.close();
             return storedPassword.equals(password);
         }

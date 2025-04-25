@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         CardView cardView3 = findViewById(R.id.cardView3);
         CardView cardView4 = findViewById(R.id.cardView4);
 
+        cardView1.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AppointmentActivity.class);
+            startActivity(intent);
+        });
 
 
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -46,10 +50,9 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        cardView1.setOnClickListener(v -> onCardClick(1));
-        cardView2.setOnClickListener(v -> onCardClick(2));
-        cardView3.setOnClickListener(v -> onCardClick(3));
-        cardView4.setOnClickListener(v -> onCardClick(4));
+
+
+
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
