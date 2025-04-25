@@ -12,6 +12,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -30,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        CardView cardView1 = findViewById(R.id.cardView1);
+        CardView cardView2 = findViewById(R.id.cardView2);
+        CardView cardView3 = findViewById(R.id.cardView3);
+        CardView cardView4 = findViewById(R.id.cardView4);
+
+
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
@@ -38,7 +46,13 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        cardView1.setOnClickListener(v -> onCardClick(1));
+        cardView2.setOnClickListener(v -> onCardClick(2));
+        cardView3.setOnClickListener(v -> onCardClick(3));
+        cardView4.setOnClickListener(v -> onCardClick(4));
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 int id = item.getItemId();
@@ -55,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+
+    private void onCardClick(int cardNumber) {
+        String message = "Card " + cardNumber + " clicked!";
+        Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+        // Implement navigation or action for each card click
     }
 
     private void showAccountInfo() {
