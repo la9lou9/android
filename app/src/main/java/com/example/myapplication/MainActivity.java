@@ -41,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        cardView3.setOnClickListener(v -> {
+            try {
+                Intent intent = new Intent(MainActivity.this, EmergencyContactsActivity.class);
+                startActivity(intent);
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+
+        });
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);

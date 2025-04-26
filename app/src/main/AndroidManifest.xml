@@ -32,6 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AppointmentActivity" />
+        <activity android:name=".EmergencyContactsActivity" />
 
     </application>
 
