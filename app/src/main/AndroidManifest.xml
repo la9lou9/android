@@ -33,7 +33,12 @@
         </activity>
         <activity android:name=".AppointmentActivity" />
         <activity android:name=".EmergencyContactsActivity" />
+        <activity android:name=".ChatbotActivity"/>
 
     </application>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+
 
 </manifest>

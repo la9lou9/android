@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
         CardView cardView2 = findViewById(R.id.cardView2);
         CardView cardView3 = findViewById(R.id.cardView3);
         CardView cardView4 = findViewById(R.id.cardView4);
+        CardView cardView5 = findViewById(R.id.cardView5);
+        CardView cardView6 = findViewById(R.id.cardView6);
+
+
 
         cardView1.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AppointmentActivity.class);
@@ -49,6 +53,13 @@ public class MainActivity extends AppCompatActivity {
             {
                 e.printStackTrace();
             }
+
+        });
+
+        cardView5.setOnClickListener(v -> {
+
+                Intent intent = new Intent(MainActivity.this, ChatbotActivity.class);
+                startActivity(intent);
 
         });
 
