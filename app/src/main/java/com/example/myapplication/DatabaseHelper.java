@@ -71,11 +71,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + TABLE_PRESCRIPTIONS + " (" +
                     COLUMN_PRESCRIPTION_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_USER_ID + " INTEGER, " +
-                    COLUMN_APPOINTMENT_ID + " INTEGER, " +
+                    COLUMN_DOCTOR_NAME + " TEXT, " +
                     COLUMN_PRESCRIPTION_DETAILS + " TEXT, " +
                     COLUMN_PRESCRIPTION_DATE + " TEXT, " + // Add the new column
-                    "FOREIGN KEY (" + COLUMN_USER_ID + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_USER_ID + "), " +
-                    "FOREIGN KEY (" + COLUMN_APPOINTMENT_ID + ") REFERENCES " + TABLE_APPOINTMENTS + "(" + COLUMN_APPOINTMENT_ID + "))";
+                    "FOREIGN KEY (" + COLUMN_USER_ID + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_USER_ID + "))";
 
     private static final String CREATE_TABLE_EMERGENCY_CONTACTS =
             "CREATE TABLE " + TABLE_EMERGENCY_CONTACTS + " (" +

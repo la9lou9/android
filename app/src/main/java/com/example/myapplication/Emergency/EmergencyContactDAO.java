@@ -1,9 +1,12 @@
-package com.example.myapplication;
+package com.example.myapplication.Emergency;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.myapplication.DatabaseHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 

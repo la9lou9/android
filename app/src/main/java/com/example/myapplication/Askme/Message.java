@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Askme;
 
 public class Message {
     private String content;

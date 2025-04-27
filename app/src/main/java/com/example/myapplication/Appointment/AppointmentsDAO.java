@@ -1,11 +1,12 @@
-package com.example.myapplication;
+package com.example.myapplication.Appointment;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.provider.ContactsContract;
+
+import com.example.myapplication.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,10 @@
-package com.example.myapplication;
+package com.example.myapplication.Askme;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
@@ -14,6 +13,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.R;
 import com.google.android.material.button.MaterialButton;
 import retrofit2.Call;
 import retrofit2.Callback;

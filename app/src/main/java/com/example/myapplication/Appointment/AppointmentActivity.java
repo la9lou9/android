@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Appointment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.R;
 import com.google.android.material.navigation.NavigationView;
 import java.util.List;
 

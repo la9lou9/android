@@ -1,22 +1,22 @@
 package com.example.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.myapplication.Appointment.AppointmentActivity;
+import com.example.myapplication.Askme.ChatbotActivity;
+import com.example.myapplication.Emergency.EmergencyContactsActivity;
+import com.example.myapplication.Prescription.PrescriptionListActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+
+
         cardView3.setOnClickListener(v -> {
             try {
                 Intent intent = new Intent(MainActivity.this, EmergencyContactsActivity.class);
@@ -54,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
+        });
+
+        cardView4.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, PrescriptionListActivity.class);
+            startActivity(intent);
         });
 
         cardView5.setOnClickListener(v -> {

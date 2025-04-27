@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Appointment;
 
 public class Appointment {
     private long id;

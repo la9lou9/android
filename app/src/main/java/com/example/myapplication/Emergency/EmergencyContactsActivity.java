@@ -1,8 +1,7 @@
-package com.example.myapplication;
+package com.example.myapplication.Emergency;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +11,8 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 import android.content.Intent;

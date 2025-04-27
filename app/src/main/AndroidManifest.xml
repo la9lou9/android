@@ -31,10 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AppointmentActivity" />
-        <activity android:name=".EmergencyContactsActivity" />
-        <activity android:name=".ChatbotActivity"/>
-
+        <activity android:name=".Appointment.AppointmentActivity" />
+        <activity android:name=".Emergency.EmergencyContactsActivity" />
+        <activity android:name=".Askme.ChatbotActivity"/>
+        <activity android:name=".Prescription.PrescriptionListActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.CAMERA" />

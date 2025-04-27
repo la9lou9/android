@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Emergency;
 
 public class EmergencyContact {
     private long id;
