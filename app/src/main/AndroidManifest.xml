@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
 
     <application
@@ -40,12 +43,14 @@
         <activity android:name=".Emergency.EmergencyContactsActivity" />
         <activity android:name=".Askme.ChatbotActivity"/>
         <activity android:name=".Prescription.PrescriptionListActivity"/>
-        <activity android:name=".Medication.MedicationListActivity"/>
-
+        <receiver android:name=".Medication.MedicationReminderReceiver" />
+        <activity android:name=".Medication.MedicationReminderActivity" />
+        <activity android:name=".Medication.MedicationListActivity" />
+        <activity android:name=".Medication.MedicationDetailActivity" />
+        <activity android:name=".Medication.EditMedicationActivity" />
     </application>
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
+
 
 
 </manifest>

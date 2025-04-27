@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Medication.MedicationReminderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Medication Reminder"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etMedicationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medication Name"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etDosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dosage (e.g., 10mg)"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Frequency (e.g., Once daily)"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Start Date"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select End Date"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnReminderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Reminder Time"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnSaveMedication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Medication"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+</ScrollView>

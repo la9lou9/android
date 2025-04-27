@@ -1,64 +1,73 @@
 package com.example.myapplication.Medication;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 
 import java.util.List;
 
-public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.MedicationViewHolder> {
+public class MedicationAdapter extends BaseAdapter {
 
-    private List<Medication> medications;
+    private Context context;
+    private List<Medication> medicationList;
+    private LayoutInflater inflater;
 
-    public MedicationAdapter(List<Medication> medications) {
-        this.medications = medications;
-    }
-
-    @NonNull
-    @Override
-    public MedicationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_medication, parent, false);
-        return new MedicationViewHolder(view);
+    public MedicationAdapter(Context context, List<Medication> medicationList) {
+        this.context = context;
+        this.medicationList = medicationList;
+        this.inflater = LayoutInflater.from(context);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MedicationViewHolder holder, int position) {
-        Medication medication = medications.get(position);
-        holder.textViewMedicationName.setText(medication.getMedicationName());
-        holder.textViewDosage.setText(medication.getDosage());
-        holder.textViewFrequency.setText(medication.getFrequency());
-        holder.textViewStartDate.setText(medication.getStartDate());
-        holder.textViewEndDate.setText(medication.getEndDate());
+    public int getCount() {
+        return medicationList.size();
     }
 
     @Override
-    public int getItemCount() {
-        return medications.size();
+    public Object getItem(int position) {
+        return medicationList.get(position);
     }
 
-    public List<Medication> getMedications() {
-        return medications;
+    @Override
+    public long getItemId(int position) {
+        return medicationList.get(position).getId();
     }
 
-    public static class MedicationViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewMedicationName;
-        TextView textViewDosage;
-        TextView textViewFrequency;
-        TextView textViewStartDate;
-        TextView textViewEndDate;
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
 
-        public MedicationViewHolder(@NonNull View itemView) {
-            super(itemView);
-            textViewMedicationName = itemView.findViewById(R.id.textViewMedicationName);
-            textViewDosage = itemView.findViewById(R.id.textViewDosage);
-            textViewFrequency = itemView.findViewById(R.id.textViewFrequency);
-            textViewStartDate = itemView.findViewById(R.id.textViewStartDate);
-            textViewEndDate = itemView.findViewById(R.id.textViewEndDate);
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.item_medication, parent, false);
+            holder = new ViewHolder();
+            holder.tvMedicationName = convertView.findViewById(R.id.tvMedicationName);
+            holder.tvDosage = convertView.findViewById(R.id.tvDosage);
+            holder.tvFrequency = convertView.findViewById(R.id.tvFrequency);
+            holder.tvReminderTime = convertView.findViewById(R.id.tvReminderTime);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
+
+        Medication medication = medicationList.get(position);
+
+        holder.tvMedicationName.setText(medication.getMedicationName());
+        holder.tvDosage.setText("Dosage: " + medication.getDosage());
+        holder.tvFrequency.setText("Frequency: " + medication.getFrequency());
+        holder.tvReminderTime.setText("Reminder: " + medication.getReminderTime());
+
+        return convertView;
+    }
+
+    static class ViewHolder {
+        TextView tvMedicationName;
+        TextView tvDosage;
+        TextView tvFrequency;
+        TextView tvReminderTime;
     }
 }

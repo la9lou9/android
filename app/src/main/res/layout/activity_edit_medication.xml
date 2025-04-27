@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Medication.EditMedicationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Medication"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etEditMedicationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medication Name"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etEditDosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dosage (e.g., 10mg)"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etEditFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Frequency (e.g., Once daily)"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEditStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Date"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnEditEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="End Date"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnEditReminderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder Time"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnUpdateMedication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Medication"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+</ScrollView>

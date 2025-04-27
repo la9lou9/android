@@ -20,11 +20,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_USER_ID = "user_id";
 
     // Users Table Columns
-
-    public static final String COLUMN_FIRSTNAME = "firstname";
-
-    public static final String COLUMN_LASTNAME = "lastname";
-
+    public static final String COLUMN_FIRST_NAME = "first_name";
+    public static final String COLUMN_LAST_NAME = "last_name";
     public static final String COLUMN_EMAIL = "email";
     public static final String COLUMN_PASSWORD = "password";
 
@@ -38,14 +35,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Prescriptions Table Columns
     public static final String COLUMN_PRESCRIPTION_ID = "prescription_id";
     public static final String COLUMN_PRESCRIPTION_DETAILS = "prescription_details";
-    public static final String COLUMN_PRESCRIPTION_DATE = "prescription_date"; // New column
+    public static final String COLUMN_PRESCRIPTION_DATE = "prescription_date";
 
-    // EmergencyContacts Table Columns
+    // Emergency Contacts Table Columns
     public static final String COLUMN_CONTACT_ID = "contact_id";
     public static final String COLUMN_CONTACT_NAME = "contact_name";
     public static final String COLUMN_CONTACT_PHONE = "contact_phone";
 
-    // Medics Table Columns
+    // Medications Table Columns
     public static final String COLUMN_MEDICATION_ID = "medication_id";
     public static final String COLUMN_MEDICATION_NAME = "medication_name";
     public static final String COLUMN_DOSAGE = "dosage";
@@ -54,15 +51,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_END_DATE = "end_date";
     public static final String COLUMN_REMINDER_TIME = "reminder_time";
 
-
-
-
-
     private static final String CREATE_TABLE_USERS =
             "CREATE TABLE " + TABLE_USERS + " (" +
                     COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    COLUMN_FIRSTNAME + " TEXT NOT NULL, " +
-                    COLUMN_LASTNAME + " TEXT NOT NULL, " +
+                    COLUMN_FIRST_NAME + " TEXT NOT NULL, " +
+                    COLUMN_LAST_NAME + " TEXT NOT NULL, " +
                     COLUMN_EMAIL + " TEXT UNIQUE NOT NULL, " +
                     COLUMN_PASSWORD + " TEXT)";
 
@@ -82,7 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_USER_ID + " INTEGER, " +
                     COLUMN_DOCTOR_NAME + " TEXT, " +
                     COLUMN_PRESCRIPTION_DETAILS + " TEXT, " +
-                    COLUMN_PRESCRIPTION_DATE + " TEXT, " + // Add the new column
+                    COLUMN_PRESCRIPTION_DATE + " TEXT, " +
                     "FOREIGN KEY (" + COLUMN_USER_ID + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_USER_ID + "))";
 
     private static final String CREATE_TABLE_EMERGENCY_CONTACTS =

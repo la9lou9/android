@@ -23,29 +23,29 @@ public class UserDAO {
 
     public long insertUser(String firstname, String lastname, String email, String password) {
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_FIRSTNAME, firstname);
-        values.put(DatabaseHelper.COLUMN_LASTNAME, lastname);
+        values.put(DatabaseHelper.COLUMN_FIRST_NAME, firstname);
+        values.put(DatabaseHelper.COLUMN_LAST_NAME, lastname);
         values.put(DatabaseHelper.COLUMN_EMAIL, email);
         values.put(DatabaseHelper.COLUMN_PASSWORD, password);
         return database.insert(DatabaseHelper.TABLE_USERS, null, values);
     }
 
     public Cursor getUserById(long id) {
-        String[] columns = {DatabaseHelper.COLUMN_USER_ID, DatabaseHelper.COLUMN_FIRSTNAME, DatabaseHelper.COLUMN_LASTNAME, DatabaseHelper.COLUMN_EMAIL, DatabaseHelper.COLUMN_PASSWORD};
+        String[] columns = {DatabaseHelper.COLUMN_USER_ID, DatabaseHelper.COLUMN_FIRST_NAME, DatabaseHelper.COLUMN_LAST_NAME, DatabaseHelper.COLUMN_EMAIL, DatabaseHelper.COLUMN_PASSWORD};
         String selection = DatabaseHelper.COLUMN_USER_ID + " = ?";
         String[] selectionArgs = {String.valueOf(id)};
         return database.query(DatabaseHelper.TABLE_USERS, columns, selection, selectionArgs, null, null, null);
     }
 
     public Cursor getAllUsers() {
-        String[] columns = {DatabaseHelper.COLUMN_USER_ID, DatabaseHelper.COLUMN_FIRSTNAME, DatabaseHelper.COLUMN_LASTNAME, DatabaseHelper.COLUMN_EMAIL, DatabaseHelper.COLUMN_PASSWORD};
+        String[] columns = {DatabaseHelper.COLUMN_USER_ID, DatabaseHelper.COLUMN_FIRST_NAME, DatabaseHelper.COLUMN_LAST_NAME, DatabaseHelper.COLUMN_EMAIL, DatabaseHelper.COLUMN_PASSWORD};
         return database.query(DatabaseHelper.TABLE_USERS, columns, null, null, null, null, null);
     }
 
     public int updateUser(long id, String firstname, String lastname, String email, String password) {
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_FIRSTNAME, firstname);
-        values.put(DatabaseHelper.COLUMN_LASTNAME, lastname);
+        values.put(DatabaseHelper.COLUMN_FIRST_NAME, firstname);
+        values.put(DatabaseHelper.COLUMN_LAST_NAME, lastname);
         values.put(DatabaseHelper.COLUMN_EMAIL, email);
         values.put(DatabaseHelper.COLUMN_PASSWORD, password);
         String selection = DatabaseHelper.COLUMN_USER_ID + " = ?";

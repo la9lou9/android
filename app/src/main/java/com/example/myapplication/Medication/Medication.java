@@ -10,7 +10,13 @@ public class Medication {
     private String endDate;
     private String reminderTime;
 
-    public Medication(long userId, String medicationName, String dosage, String frequency, String startDate, String endDate, String reminderTime) {
+    public Medication() {
+        // Default constructor
+    }
+
+    public Medication(long id, long userId, String medicationName, String dosage, String frequency,
+                      String startDate, String endDate, String reminderTime) {
+        this.id = id;
         this.userId = userId;
         this.medicationName = medicationName;
         this.dosage = dosage;
@@ -20,7 +26,7 @@ public class Medication {
         this.reminderTime = reminderTime;
     }
 
-    // Getter and Setter methods
+    // Getters and Setters
     public long getId() {
         return id;
     }
