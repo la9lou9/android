@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.myapplication.Appointment.AppointmentActivity;
 import com.example.myapplication.Askme.ChatbotActivity;
 import com.example.myapplication.Emergency.EmergencyContactsActivity;
+import com.example.myapplication.Medication.MedicationListActivity;
 import com.example.myapplication.Prescription.PrescriptionListActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -44,7 +45,16 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, AppointmentActivity.class);
             startActivity(intent);
         });
+        try{
+        cardView2.setOnClickListener(v -> {
 
+            Intent intent = new Intent(MainActivity.this, MedicationListActivity.class);
+            startActivity(intent);
+        });
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
 
         cardView3.setOnClickListener(v -> {
