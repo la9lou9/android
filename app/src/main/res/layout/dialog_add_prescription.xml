@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextPrescriptionDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prescription Details" />
+
+    <EditText
+        android:id="@+id/editTextPrescriptionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prescription Date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editTextDoctorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Doctor Name" />
+
+</LinearLayout>
