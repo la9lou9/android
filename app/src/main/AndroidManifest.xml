@@ -39,6 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Onboarding.OnboardingActivity"/>
         <activity android:name=".Appointment.AppointmentActivity" />
         <activity android:name=".Emergency.EmergencyContactsActivity" />
         <activity android:name=".Askme.ChatbotActivity"/>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="240"
+    android:viewportHeight="240">
+
+    <!-- App Icon Circle Background -->
+    <path
+        android:fillColor="#F5F5F5"
+        android:pathData="M120,120m-110,0a110,110 0,1 1,220 0a110,110 0,1 1,-220 0" />
+
+    <!-- Medical Cross -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M120,70L120,70A10,10 0,0 1,130 80L130,160A10,10 0,0 1,120 170L120,170A10,10 0,0 1,110 160L110,80A10,10 0,0 1,120 70z" />
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M70,120L70,120A10,10 0,0 1,80 110L160,110A10,10 0,0 1,170 120L170,120A10,10 0,0 1,160 130L80,130A10,10 0,0 1,70 120z" />
+
+    <!-- Heartbeat Line -->
+    <path
+        android:strokeColor="#FF5722"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M50,165 Q65,165 70,165 T90,145 T110,165 T130,185 T150,165 T170,145 T190,165" />
+
+</vector>

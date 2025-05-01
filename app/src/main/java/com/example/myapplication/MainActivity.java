@@ -17,6 +17,7 @@ import com.example.myapplication.Appointment.AppointmentActivity;
 import com.example.myapplication.Askme.ChatbotActivity;
 import com.example.myapplication.Emergency.EmergencyContactsActivity;
 import com.example.myapplication.Medication.MedicationListActivity;
+import com.example.myapplication.Onboarding.OnboardingActivity;
 import com.example.myapplication.Prescription.PrescriptionListActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -27,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        SharedPreferences sharedPreferences = getSharedPreferences("onboarding_pref", MODE_PRIVATE);
+        boolean isFirstLaunch = !sharedPreferences.getBoolean("is_completed", false);
+
+        if (isFirstLaunch) {
+            // Direct to onboarding screen
+            startActivity(new Intent(this, OnboardingActivity.class));
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -128,8 +141,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Account Security Selected", Toast.LENGTH_SHORT).show();
         // Implement navigation to account security screen
     }
-
-    private void logout() {
+    public void logout () {
         SharedPreferences sharedPreferences = getSharedPreferences("login_prefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
@@ -142,9 +154,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-
 }
+
 
 
 
