@@ -65,6 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Start Date"
+            android:backgroundTint="#EA9F38"
+
             android:layout_marginBottom="16dp"/>
 
         <Button
@@ -72,6 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="End Date"
+            android:backgroundTint="#EA9F38"
+
             android:layout_marginBottom="16dp"/>
 
         <Button
@@ -79,6 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reminder Time"
+            android:backgroundTint="#EA9F38"
             android:layout_marginBottom="24dp"/>
 
         <Button
@@ -86,7 +91,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Update Medication"
-            android:backgroundTint="@android:color/holo_blue_dark"/>
+            android:backgroundTint="#21B3A6"
+            />
+
+        <Button
+            android:id="@+id/btnDeleteMedication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Medication"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"/>
+
+
+
 
     </LinearLayout>
 </ScrollView>

@@ -12,188 +12,201 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="1070dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home" />
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/main_color"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:fontFamily="@font/platypi"
+            android:text="sa7tek fi jibek"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:shadowColor="#AA000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Stay Organized, Stay Healthy."
+            android:textSize="25sp"
+            android:shadowColor="#AA000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+
         <GridLayout
+            android:id="@+id/gridLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="108dp"
-            android:alignmentMode="alignMargins"
+            android:layout_below="@id/subtitle"
             android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:padding="8dp"
-            android:rowCount="3">
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView1"
+                android:id="@+id/buttonRendezVous"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_rowWeight="1"
+                android:layout_height="170dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="10dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="6dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                android:foreground="?attr/selectableItemBackground">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/doctor" />
-                </RelativeLayout>
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="122dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Rendez-vous"
+                    android:src="@drawable/rendezvousf" />
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView2"
+                android:id="@+id/buttonpill"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_rowWeight="1"
+                android:layout_height="170dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="10dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="6dp">
+                android:foreground="?attr/selectableItemBackground">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="122dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="pill"
+                    android:src="@drawable/pillsf" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/painkiller" />
-                </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttonemergency"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+
+                <ImageView
+                    android:layout_width="128dp"
+                    android:layout_height="119dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Contacts d'urgence"
+                    android:src="@drawable/contactf" />
+
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView3"
+                android:id="@+id/buttonpresreption"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_rowWeight="1"
+                android:layout_height="170dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="10dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="6dp">
+                android:foreground="?attr/selectableItemBackground">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/urgent" />
-                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="117dp"
+                    android:layout_height="124dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Prescriptions"
+                    android:src="@drawable/ordonnancef" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttonchatbot"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="111dp"
+                    android:layout_height="108dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="ChatBot"
+                    android:src="@drawable/userf" />
+
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView4"
+                android:id="@+id/buttoncalendar"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_rowWeight="1"
+                android:layout_height="170dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="10dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="6dp">
+                android:foreground="?attr/selectableItemBackground">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="123dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Calendrier"
+                    android:src="@drawable/calandref" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/perscreption" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView5"
-                android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/askme" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView6"
-                android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/question" />
-                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
         </GridLayout>
+
 
     </RelativeLayout>
 

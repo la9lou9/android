@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        CardView cardView1 = findViewById(R.id.cardView1);
-        CardView cardView2 = findViewById(R.id.cardView2);
-        CardView cardView3 = findViewById(R.id.cardView3);
-        CardView cardView4 = findViewById(R.id.cardView4);
-        CardView cardView5 = findViewById(R.id.cardView5);
-        CardView cardView6 = findViewById(R.id.cardView6);
+        CardView cardView1 = findViewById(R.id.buttonRendezVous);
+        CardView cardView2 = findViewById(R.id.buttonpill);
+        CardView cardView3 = findViewById(R.id.buttonemergency);
+        CardView cardView4 = findViewById(R.id.buttonpresreption);
+        CardView cardView5 = findViewById(R.id.buttonchatbot);
+        CardView cardView6 = findViewById(R.id.buttoncalendar);
 
 
 

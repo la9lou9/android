@@ -26,7 +26,8 @@ import java.util.Locale;
 public class EditMedicationActivity extends AppCompatActivity {
 
     private EditText etMedicationName, etDosage, etFrequency;
-    private Button btnStartDate, btnEndDate, btnReminderTime, btnUpdateMedication;
+    private Button btnStartDate, btnEndDate, btnReminderTime, btnUpdateMedication,  btnDeleteMedication;
+
     private Calendar startDateCalendar, endDateCalendar, reminderTimeCalendar;
     private SimpleDateFormat dateFormatter, timeFormatter;
     private MedicationDAO medicationDAO;
@@ -66,12 +67,14 @@ public class EditMedicationActivity extends AppCompatActivity {
         btnEndDate = findViewById(R.id.btnEditEndDate);
         btnReminderTime = findViewById(R.id.btnEditReminderTime);
         btnUpdateMedication = findViewById(R.id.btnUpdateMedication);
+        btnDeleteMedication = findViewById(R.id.btnDeleteMedication);
 
         // Set click listeners
         btnStartDate.setOnClickListener(v -> showDatePicker(startDateCalendar, btnStartDate));
         btnEndDate.setOnClickListener(v -> showDatePicker(endDateCalendar, btnEndDate));
         btnReminderTime.setOnClickListener(v -> showTimePicker());
         btnUpdateMedication.setOnClickListener(v -> updateMedication());
+        btnDeleteMedication.setOnClickListener(v -> deleteMedication());
 
         // Load medication data
         loadMedicationData();
@@ -171,6 +174,16 @@ public class EditMedicationActivity extends AppCompatActivity {
             finish();
         } else {
             Toast.makeText(this, "Failed to update medication", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void deleteMedication() {
+        int result = medicationDAO.deleteMedication(medicationId);
+        if (result > 0) {
+            Toast.makeText(this, "Médicament supprimé", Toast.LENGTH_SHORT).show();
+            finish(); // Ferme l'activité
+        } else {
+            Toast.makeText(this, "Échec de la suppression", Toast.LENGTH_SHORT).show();
         }
     }
 

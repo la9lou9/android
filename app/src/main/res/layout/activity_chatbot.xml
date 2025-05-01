@@ -29,12 +29,14 @@
             android:id="@+id/buttonSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#21B3A6"
             android:text="Send" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonTakePhoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#21B3A6"
             android:text="Photo" />
     </LinearLayout>
 

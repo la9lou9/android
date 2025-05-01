@@ -49,6 +49,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_FREQUENCY = "frequency";
     public static final String COLUMN_START_DATE = "start_date";
     public static final String COLUMN_END_DATE = "end_date";
+    public static final String COLUMN_IMAGE_URI = "image_uri";
     public static final String COLUMN_REMINDER_TIME = "reminder_time";
 
     private static final String CREATE_TABLE_USERS =
@@ -96,6 +97,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_START_DATE + " TEXT, " +
                     COLUMN_END_DATE + " TEXT, " +
                     COLUMN_REMINDER_TIME + " TEXT, " +
+                    COLUMN_IMAGE_URI + " TEXT, " +
                     "FOREIGN KEY (" + COLUMN_USER_ID + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_USER_ID + "))";
 
     public DatabaseHelper(Context context) {

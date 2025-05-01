@@ -65,6 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Start Date"
+            android:backgroundTint="#EA9F38"
             android:layout_marginBottom="16dp"/>
 
         <Button
@@ -72,6 +73,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select End Date"
+            android:backgroundTint="#EA9F38"
+
             android:layout_marginBottom="16dp"/>
 
         <Button
@@ -79,6 +82,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Set Reminder Time"
+            android:backgroundTint="#EA9F38"
+
             android:layout_marginBottom="24dp"/>
 
         <Button
@@ -86,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Save Medication"
-            android:backgroundTint="@android:color/holo_blue_dark"/>
+            android:backgroundTint="#21B2A5" />
 
     </LinearLayout>
 </ScrollView>

@@ -33,7 +33,7 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@android:color/holo_blue_dark"/>
+        app:backgroundTint="#22B3A6"/>
 
     <TextView
         android:id="@+id/tvEmptyView"

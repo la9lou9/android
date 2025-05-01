@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edit Medication"
-            android:backgroundTint="@android:color/holo_blue_dark"/>
+            android:backgroundTint="#22B3A6"/>
 
     </LinearLayout>
 </ScrollView>
