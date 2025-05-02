@@ -13,7 +13,12 @@
         android:layout_height="match_parent">
 
         <!-- Toolbar for the menu icon -->
-
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <!-- RecyclerView for appointments -->
         <androidx.recyclerview.widget.RecyclerView
@@ -35,7 +40,6 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#21B3A6"
             android:text="Add Appointment" />
 
     </RelativeLayout>
