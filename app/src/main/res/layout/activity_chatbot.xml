@@ -1,43 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    tools:context=".Askme.ChatbotActivity"
+    android:background="@drawable/chat_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/chatbot_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="Health Assistant"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewChat"
+        android:id="@+id/recycler_view_chat"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_above="@id/layoutInput"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_chat_input"
+        android:layout_below="@+id/chatbot_toolbar"
+        android:padding="8dp"
+        android:clipToPadding="false" />
 
-    <LinearLayout
-        android:id="@+id/layoutInput"
+    <RelativeLayout
+        android:id="@+id/layout_chat_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:background="@android:color/white"
+        android:padding="8dp">
 
         <EditText
-            android:id="@+id/editTextMessage"
-            android:layout_width="0dp"
+            android:id="@+id/edit_text_message"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Type a message" />
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/button_send"
+            android:background="@drawable/edit_text_background"
+            android:hint="Type your health question..."
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minHeight="48dp"
+            android:padding="12dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonSend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#21B3A6"
-            android:text="Send" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonTakePhoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#21B3A6"
-            android:text="Photo" />
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/button_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Send message"
+            android:src="@drawable/ic_send" />
+    </RelativeLayout>
 
 </RelativeLayout>

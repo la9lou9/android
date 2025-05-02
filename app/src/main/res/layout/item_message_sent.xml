@@ -1,16 +1,32 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp"
-    android:layout_gravity="end">
+    android:paddingVertical="8dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="64dp">
 
     <TextView
-        android:id="@+id/textViewMessage"
+        android:id="@+id/text_message_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/askme"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/message_sent_background"
+        android:maxWidth="240dp"
         android:padding="12dp"
-        android:textColor="@android:color/black" />
+        android:text="This is a sent message"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/text_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_message_body"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:text="11:40 PM"
+        android:textColor="#757575"
+        android:textSize="12sp" />
+
+</RelativeLayout>

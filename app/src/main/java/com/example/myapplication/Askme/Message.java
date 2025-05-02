@@ -1,19 +1,35 @@
 package com.example.myapplication.Askme;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class Message {
-    private String content;
-    private boolean isSentByUser;
+    public static final int TYPE_SENT = 0;
+    public static final int TYPE_RECEIVED = 1;
 
-    public Message(String content, boolean isSentByUser) {
-        this.content = content;
-        this.isSentByUser = isSentByUser;
+    private String messageText;
+    private int messageType;
+    private String messageTime;
+
+    public Message(String messageText, int messageType) {
+        this.messageText = messageText;
+        this.messageType = messageType;
+
+        // Set the message time as current time
+        SimpleDateFormat sdf = new SimpleDateFormat("h:mm a", Locale.getDefault());
+        this.messageTime = sdf.format(new Date());
     }
 
-    public String getContent() {
-        return content;
+    public String getMessageText() {
+        return messageText;
     }
 
-    public boolean isSentByUser() {
-        return isSentByUser;
+    public int getMessageType() {
+        return messageType;
+    }
+
+    public String getMessageTime() {
+        return messageTime;
     }
 }
