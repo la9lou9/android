@@ -11,7 +11,7 @@
         android:id="@+id/chatbot_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#22B3A6"
         android:elevation="4dp"
         app:title="Health Assistant"
         app:titleTextColor="@android:color/white"
