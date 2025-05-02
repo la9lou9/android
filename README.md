@@ -44,8 +44,8 @@ The application uses Google's Gemini AI to provide a conversational health assis
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/sa7tek-fi-jibek.git
-   cd sa7tek-fi-jibek
+   git clone https://github.com/la9lou9/android
+   cd android
    ```
 
 2. **Open in Android Studio**
@@ -134,6 +134,4 @@ This project is licensed under the [MIT License](LICENSE.md) - see the LICENSE f
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/sa7tek-fi-jibek](https://github.com/yourusername/sa7tek-fi-jibek)
+Project Link: [https://github.com/la9lou9/android](https://github.com/la9lou9/android)
