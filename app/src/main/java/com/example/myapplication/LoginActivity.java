@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.myapplication.Onboarding.OnboardingActivity;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editEmail, editPassword;
@@ -86,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
             saveLoginState( true, email);
             // Navigate to the main activity or home screen
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, OnboardingActivity.class);
             startActivity(intent);
             finish();
         } else {

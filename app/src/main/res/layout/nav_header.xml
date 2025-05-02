@@ -23,14 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="User Name"
+        android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/textViewUserEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="user.email@example.com"
+        android:text="@string/mail"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
 </LinearLayout>

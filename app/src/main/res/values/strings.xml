@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Sa7teb Fi Jibek </string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -8,5 +8,7 @@
     <string name="appointment">Book Doctor Appointment</string>
     <string name="medicines">Take Medicines</string>
     <string name="urgent">Urgent Contact</string>
+    <string name="name">test</string>
+    <string name="mail">test@test.com</string>
 
 </resources>
