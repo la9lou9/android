@@ -11,4 +11,8 @@
     <string name="name">test</string>
     <string name="mail">test@test.com</string>
 
+    <string name="calendar_title">Health Calendar</string>
+    <string name="add_event">Add Event</string>
+    <string name="events_for_date">Events for Selected Date:</string>
+    <string name="no_events">No events for this date</string>
 </resources>

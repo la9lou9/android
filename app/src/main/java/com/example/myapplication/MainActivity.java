@@ -80,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        cardView6.setOnClickListener(v -> {
+
+            Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
+            startActivity(intent);
+
+        });
+
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
